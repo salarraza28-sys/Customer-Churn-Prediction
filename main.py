@@ -1,4 +1,5 @@
 import logging
+import joblib
 from sklearn.model_selection import train_test_split
 from data_loader import DataLoader
 from preprocessor import DataPreprocessor
@@ -19,6 +20,8 @@ def main():
         trainer=ModelTrainer("xgboost")
         model=trainer.train(X_train,y_train)
         ModelEvaluator.evaluate(model, X_test, y_test)
+        joblib.dump(model, "model.pkl")
+        joblib.dump(X.columns.tolist(), "feature_columns.pkl")
         predictor=ChurnPredictor(model,X.columns)
         sample=X.iloc[0].to_dict()
         prob=predictor.predict(sample)

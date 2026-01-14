@@ -11,3 +11,29 @@
 2026-01-15 01:15:07,797 | INFO | INFO | Churn prediction successful: 0.57
 2026-01-15 01:15:07,797 | INFO | INFO | Churn Probability for sample customer: 0.57
 2026-01-15 01:15:07,798 | INFO | INFO | Application completed successfully
+2026-01-15 01:35:50,244 | INFO | INFO | Churn prediction application started
+2026-01-15 01:35:50,245 | INFO | INFO | Loading dataset from /Users/a.msalarraza/Downloads/Customer_Churn/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-15 01:35:50,269 | INFO | INFO | Dataset loaded successfully
+2026-01-15 01:35:50,269 | INFO | INFO | Starting data preprocessing
+2026-01-15 01:35:50,296 | INFO | INFO | Data preprocessing completed successfully
+2026-01-15 01:35:50,301 | INFO | INFO | Initializing model: xgboost
+2026-01-15 01:35:50,301 | INFO | INFO | Starting model training
+2026-01-15 01:35:50,617 | INFO | INFO | Model training completed successfully
+2026-01-15 01:35:50,617 | INFO | INFO | Evaluating model performance
+2026-01-15 01:35:50,643 | INFO | INFO | Starting churn prediction
+2026-01-15 01:35:50,647 | INFO | INFO | Churn prediction successful: 0.66
+2026-01-15 01:35:50,647 | INFO | INFO | Churn Probability for sample customer: 0.66
+2026-01-15 01:35:50,647 | INFO | INFO | Application completed successfully
+2026-01-15 01:43:45,190 | INFO | INFO | Churn prediction application started
+2026-01-15 01:43:45,190 | INFO | INFO | Loading dataset from /Users/a.msalarraza/Downloads/Customer_Churn/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-15 01:43:45,213 | INFO | INFO | Dataset loaded successfully
+2026-01-15 01:43:45,214 | INFO | INFO | Starting data preprocessing
+2026-01-15 01:43:45,239 | INFO | INFO | Data preprocessing completed successfully
+2026-01-15 01:43:45,244 | INFO | INFO | Initializing model: xgboost
+2026-01-15 01:43:45,244 | INFO | INFO | Starting model training
+2026-01-15 01:43:45,537 | INFO | INFO | Model training completed successfully
+2026-01-15 01:43:45,537 | INFO | INFO | Evaluating model performance
+2026-01-15 01:43:45,562 | INFO | INFO | Starting churn prediction
+2026-01-15 01:43:45,566 | INFO | INFO | Churn prediction successful: 0.62
+2026-01-15 01:43:45,566 | INFO | INFO | Churn Probability for sample customer: 0.62
+2026-01-15 01:43:45,566 | INFO | INFO | Application completed successfully

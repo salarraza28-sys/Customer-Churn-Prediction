@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input, select { margin: 5px 0; width: 200px; }
+        button { margin-top: 10px; padding: 8px; }
+    </style>
+</head>
+<body>
+
+<h2>Customer Churn Prediction</h2>
+
+<form method="POST">
+    <label>Gender:</label><br>
+    <select name="gender" required>
+    <option value="" disabled selected>Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    </select><br>
+
+    <label>Senior Citizen:</label><br>
+    <select name="SeniorCitizen">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br>
+
+    <label>Partner:</label><br>
+    <select name="Partner">
+        <option>No</option>
+        <option>Yes</option>
+    </select><br>
+
+    <label>Dependents:</label><br>
+    <select name="Dependents">
+        <option>No</option>
+        <option>Yes</option>
+    </select><br>
+
+    <label>Tenure (months):</label><br>
+    <input type="number" name="tenure" required><br>
+
+    <label>Monthly Charges:</label><br>
+    <input type="number" step="0.01" name="MonthlyCharges" required><br>
+
+    <label>Total Charges:</label><br>
+    <input type="number" step="0.01" name="TotalCharges" required><br>
+
+    <label>Contract:</label><br>
+    <select name="Contract" required>
+    <option value="" disabled selected>Select Contract Type</option>
+    <option value="Month-to-month">Month-to-month</option>
+    <option value="One year">One year</option>
+    <option value="Two year">Two year</option>
+    </select><br>
+
+    <button type="submit">Predict Churn</button>
+</form>
+
+{% if churn_prob is not none %}
+    <h3>Churn Probability: {{ churn_prob }}</h3>
+
+    {% if churn_prob > 0.6 %}
+        <p style="color:red;">High Risk of Churn</p>
+    {% elif churn_prob > 0.4 %}
+        <p style="color:orange;">Medium Risk of Churn</p>
+    {% else %}
+        <p style="color:green;">Low Risk of Churn</p>
+    {% endif %}
+{% endif %}
+
+</body>
+</html>
