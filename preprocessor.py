@@ -7,7 +7,7 @@ class DataPreprocessor:
         try:
             df=df.copy()
             df['TotalCharges']=pd.to_numeric(df['TotalCharges'],errors='coerce')
-            df['TotalCharges']=.fillna(df['TotalCharges'].median(),inplace=True)
+            df['TotalCharges']=pd.fillna(df['TotalCharges'].median(),inplace=True)
             df.drop('customerID',axis=1,inplace=True)
             df['Churn']=df['Churn'].map({'Yes':1,'No':0})
             categorical_cols=df.select_dtypes(include='object').columns
