@@ -1,4 +1,4 @@
-from sklearn.linear_ model import LogisticRegression
+from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 class ModelTrainer:
