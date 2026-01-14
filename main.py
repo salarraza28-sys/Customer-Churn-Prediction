@@ -1,11 +1,16 @@
+import logging
 from sklearn.model_selection import train_test_split
 from data_loader import DataLoader
 from preprocessor import DataPreprocessor
 from model_trainer import ModelTrainer
 from evaluator import ModelEvaluator
 from predictor import ChurnPredictor
+from logger_config import setup_logger
 def main():
+    setup_logger()
+    logger = logging.getLogger(__name__)
     try:
+        logger.info("Churn prediction application started")
         loader=DataLoader("/Users/a.msalarraza/Downloads/Customer_Churn/WA_Fn-UseC_-Telco-Customer-Churn.csv")
         df=loader.load_data()
         preprocessor=DataPreprocessor()
@@ -17,8 +22,10 @@ def main():
         predictor=ChurnPredictor(model,X.columns)
         sample=X.iloc[0].to_dict()
         prob=predictor.predict(sample)
-        print(f"Churn Probability:{prob:.2f}")
+        logger.info(f"Churn Probability for sample customer: {prob:.2f}")
+        logger.info("Application completed successfully")
     except Exception as e:
-        print("Application Error:",e)
-    if __name__=="__main__":
-        main()
+        logger.error(f"Application Error: {e}")
+        raise
+if __name__=="__main__":
+    main()

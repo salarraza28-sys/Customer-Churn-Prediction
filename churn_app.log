@@ -1,0 +1,13 @@
+2026-01-15 01:15:07,420 | INFO | INFO | Churn prediction application started
+2026-01-15 01:15:07,421 | INFO | INFO | Loading dataset from /Users/a.msalarraza/Downloads/Customer_Churn/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-15 01:15:07,444 | INFO | INFO | Dataset loaded successfully
+2026-01-15 01:15:07,444 | INFO | INFO | Starting data preprocessing
+2026-01-15 01:15:07,469 | INFO | INFO | Data preprocessing completed successfully
+2026-01-15 01:15:07,473 | INFO | INFO | Initializing model: xgboost
+2026-01-15 01:15:07,474 | INFO | INFO | Starting model training
+2026-01-15 01:15:07,772 | INFO | INFO | Model training completed successfully
+2026-01-15 01:15:07,772 | INFO | INFO | Evaluating model performance
+2026-01-15 01:15:07,792 | INFO | INFO | Starting churn prediction
+2026-01-15 01:15:07,797 | INFO | INFO | Churn prediction successful: 0.57
+2026-01-15 01:15:07,797 | INFO | INFO | Churn Probability for sample customer: 0.57
+2026-01-15 01:15:07,798 | INFO | INFO | Application completed successfully
