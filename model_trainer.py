@@ -13,4 +13,10 @@ class ModelTrainer:
         elif self.model_type == "xgboost":
             return XGBClassifier(n_estimators=200, learning_rate=0.05, max_dept=5, eval_metric="logloss")
         else:
-            raise Exception(f"ModelTraining Failed: {e}")
+            raise ValueError(f"Unsupported Model type")
+    def train(self, X, y):
+        try:
+            self.model.fit(X,y)
+            return self.model
+        except Exception as e:
+            raise Exception(f"Model Training failed: {e}") 
